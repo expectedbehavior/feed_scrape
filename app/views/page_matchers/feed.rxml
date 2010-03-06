@@ -17,7 +17,7 @@ xml.rss(:version=>"2.0") {
 				 xml.description(item)  
 # 				 xml.tag(blog_post.tag_string)  
 # 				 xml.posted_by(blog_post.posted_by.user_name)  
-         xml.guid(SHA1.hexdigest(item), :isPermaLink => false)
+         xml.guid(Digest::SHA1.hexdigest(item), :isPermaLink => false)
 			 end  
 		 end  
 	}
