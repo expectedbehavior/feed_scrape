@@ -1,0 +1,6 @@
+%h2 Editing page_matcher
+= render :partial => "form", :locals => {:page_matcher => @page_matcher}
+%ul
+  %li= link_to 'Show', @page_matcher
+  %li= link_to 'Back', page_matchers_path
+  %li= link_to 'Destroy', @page_matcher, :confirm => 'Are you sure?', :method => :delete  

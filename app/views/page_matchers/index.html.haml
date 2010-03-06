@@ -1,0 +1,8 @@
+%h2 Listing page_matchers
+- if !@page_matchers.empty?
+  .page_matchers
+    = render :partial => "page_matcher", :collection => @page_matchers
+  = will_paginate(@page_matchers)
+- else
+  %p There are no page_matchers to show yet.
+= link_to 'New page_matcher', new_page_matcher_path

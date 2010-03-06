@@ -1,0 +1,12 @@
+%h2= "PageMatcher \"#{@page_matcher.to_param}\""
+- content_tag_for :div, @page_matcher do
+  %ul
+    %li
+      %strong Url:
+      =h @page_matcher.url
+    %li
+      %strong Item regexp:
+      =h @page_matcher.item_regexp
+%ul
+  %li= link_to 'Edit', edit_page_matcher_path(@page_matcher)
+  %li= link_to 'Back', page_matchers_path

@@ -1,0 +1,12 @@
+- form_for(page_matcher) do |f|
+  = f.error_messages
+  %p
+    = f.label :url
+    %br
+    = f.text_area :url
+  %p
+    = f.label :item_regexp
+    %br
+    = f.text_area :item_regexp
+  %p
+    = f.submit "Submit"

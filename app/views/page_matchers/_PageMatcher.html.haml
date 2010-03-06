@@ -1,0 +1,11 @@
+- content_tag_for :div, page_matcher do
+  %ul
+    %li
+      %strong Url:
+      =h page_matcher.url
+    %li
+      %strong Item regexp:
+      =h page_matcher.item_regexp
+    = link_to 'Show', page_matcher
+    = link_to 'Edit', edit_page_matcher_path(page_matcher)
+    = link_to 'Destroy', page_matcher, :confirm => 'Are you sure?', :method => :delete

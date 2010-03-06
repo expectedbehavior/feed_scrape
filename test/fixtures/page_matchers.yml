@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyText
+  item_regexp: MyText
+
+two:
+  url: MyText
+  item_regexp: MyText

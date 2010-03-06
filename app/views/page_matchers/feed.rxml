@@ -1,0 +1,24 @@
+require 'SHA1'
+xml.instruct! :xml, :version=>"1.0"
+xml.rss(:version=>"2.0") {
+	xml.channel {
+		xml.title("test title")  
+		#if(!@blog.feedburner_url.blank?)
+		#	xml.link(:rel => 'alternate', :type => 'application/rss+xml', :href => @blog.feedburner_url)
+		#else
+			xml.link(@page_matcher.url)
+		#end 
+		xml.description("test desc")  
+		xml.language('en-us')  
+		for item in @page_matcher.items
+			xml.item do  
+				 xml.title("item title")  
+				 xml.link("item link")
+				 xml.description(item)  
+# 				 xml.tag(blog_post.tag_string)  
+# 				 xml.posted_by(blog_post.posted_by.user_name)  
+         xml.guid(SHA1.hexdigest(item), :isPermaLink => false)
+			 end  
+		 end  
+	}
+}

@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100306174905) do
+ActiveRecord::Schema.define(:version => 20100306182033) do
+
+  create_table "page_matchers", :force => true do |t|
+    t.text     "url"
+    t.text     "item_regexp"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
