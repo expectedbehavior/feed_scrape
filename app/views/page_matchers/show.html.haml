@@ -1,6 +1,9 @@
-%h2= "PageMatcher \"#{@page_matcher.to_param}\""
+%h2= "PageMatcher \"#{h @page_matcher.name}\""
 - content_tag_for :div, @page_matcher do
   %ul
+    %li
+      %strong Name:
+      =h @page_matcher.name
     %li
       %strong Url:
       =h @page_matcher.url
