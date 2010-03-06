@@ -13,3 +13,4 @@
 %ul
   %li= link_to 'Edit', edit_page_matcher_path(@page_matcher)
   %li= link_to 'Back', page_matchers_path
+  %li= link_to "feed", feed_page_matcher_url(@page_matcher, :format => :xml)

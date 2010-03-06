@@ -12,3 +12,4 @@
     = link_to 'Show', page_matcher
     = link_to 'Edit', edit_page_matcher_path(page_matcher)
     = link_to 'Destroy', page_matcher, :confirm => 'Are you sure?', :method => :delete
+    = link_to "feed", feed_page_matcher_url(page_matcher, :format => :xml)
