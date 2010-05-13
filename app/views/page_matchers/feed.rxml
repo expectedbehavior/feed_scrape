@@ -14,10 +14,10 @@ xml.rss(:version=>"2.0") {
 			xml.item do  
 				 xml.title("item title")
 				 xml.link("item link")
-				 xml.description(item)  
+				 xml.description(item.to_s)  
 # 				 xml.tag(blog_post.tag_string)  
 # 				 xml.posted_by(blog_post.posted_by.user_name)  
-         xml.guid(Digest::SHA1.hexdigest(item), :isPermaLink => false)
+         xml.guid(Digest::SHA1.hexdigest(item.to_s), :isPermaLink => false)
 			 end  
 		 end  
 	}
